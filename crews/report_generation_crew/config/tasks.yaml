@@ -1,0 +1,71 @@
+data_analysis_task:
+  description: >
+    The following are the processed results of a survey about cryptocurrencies, 
+    including frequency tables, cross-tabulations, and chi-square test results:
+
+    ----------------------------------
+    {processed_survey_results}
+    ----------------------------------
+    
+    Your task is to analyze the provided survey results on cryptocurrency awareness, 
+    familiarity, ownership, and demographic trends. 
+    Utilize the frequency tables and chi-square cross-tabulation results to generate 
+    a polished, professional market research report. 
+    The report should be structured clearly and provide actionable insights for stakeholders.
+
+    **Key aspects to cover:**
+    
+    - **Executive Summary:** Summarize key findings at a high level, including awareness, 
+      familiarity, ownership trends, and significant relationships.
+    - **Introduction and Methodology:** Outline the purpose of the survey, scope, limitations, 
+      and approach used for analysis.
+    - **Respondent Profile:** Provide a demographic breakdown, including age, education, gender, 
+      income, and computer skills.
+    - **Main Findings:** Analyze and interpret frequency tables for cryptocurrency awareness, 
+      familiarity, ownership, and opinions.
+    - **Cross-Tabulation and Statistical Analysis:** Examine chi-square test results to identify 
+      significant relationships, focusing on cryptocurrency awareness by computer skills, age, 
+      education, and gender.
+    - **Conclusions and Recommendations:** Offer strategic insights and actionable recommendations 
+      for stakeholders, highlighting key target groups and educational opportunities.
+
+  expected_output: >
+    The final deliverable should be a professionally structured market research report 
+    in markdown format (without code blocks). The report should have a logical flow, use 
+    concise language, and include visual aids such as tables and charts where relevant.
+    It should clearly distinguish statistically significant findings from non-significant ones 
+    and provide practical, data-driven recommendations. 
+
+    The report should be approximately 5-10 pages in length, depending on the depth of analysis.
+
+  agent: expert_market_research_analyst
+
+
+
+review_task:
+  description: >
+    Review and refine the market research report generated from the data_analysis_task.
+
+    The report was originally generated from the following data:
+
+    ----------------------------------
+    {processed_survey_results}
+    ----------------------------------
+
+    Ensure that:
+    
+    - All key sections (Executive Summary, Methodology, Findings, etc.) are present and well-structured.
+    - Statistical results (chi-square tests) are correctly interpreted and clearly explained.
+    - The report provides actionable insights and strategic recommendations.
+    - The writing is clear, concise, and professionally formatted in markdown (without code blocks).
+    - Tables and charts effectively illustrate key points.
+    - The report maintains a logical flow, with each section connecting smoothly.
+    - Any missing or unclear elements are flagged for revision.
+
+  expected_output: >
+    A revised, polished version of the market research report with improved clarity, logical flow, 
+    and well-supported conclusions. The final document should be suitable for presentation to 
+    stakeholders, free of errors, and enhanced for readability and business impact.
+
+  agent: expert_market_research_reviewer
+  context: [data_analysis_task]
