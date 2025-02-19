@@ -4,3 +4,4 @@ pydantic
 requests
 crewai
 crewai-tools
+scipy
